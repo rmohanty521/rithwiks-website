@@ -49,6 +49,11 @@
     return new Promise(r => setTimeout(r, ms));
   }
 
+  // Tag the initial history entry so back/forward across SPA + initial loads behave consistently.
+  if (!history.state || !history.state.spa) {
+    history.replaceState({ spa: true, initial: true }, '', location.href);
+  }
+
   let inFlight = null;
 
   async function navigate(href, push = true) {

@@ -81,9 +81,25 @@ button { font: inherit; color: inherit; cursor: pointer; background: none; borde
 .resume-btn:hover { border-color: var(--accent); background: color-mix(in srgb, var(--accent) 10%, transparent); }
 .resume-btn svg { width: 14px; height: 14px; }
 @media (max-width: 800px) {
-  .topnav { grid-template-columns: 1fr auto; padding: 14px 18px; }
-  .nav-tabs { display: none; }
-  .resume-btn { padding: 6px 10px; font-size: 12px; }
+  .topnav {
+    grid-template-columns: auto 1fr;
+    grid-template-rows: auto auto;
+    column-gap: 12px;
+    row-gap: 6px;
+    padding: 10px 16px 8px;
+  }
+  .brand { grid-column: 1; grid-row: 1; justify-self: start; font-size: 16px; }
+  .resume-btn { grid-column: 2; grid-row: 1; justify-self: end; padding: 6px 10px; font-size: 12px; }
+  .nav-tabs {
+    grid-column: 1 / -1;
+    grid-row: 2;
+    justify-self: center;
+    gap: 22px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .nav-tab { font-size: 13px; padding: 4px 2px; }
+  .page { padding-top: 110px; }
 }
 
 /* ===== Stars ===== */
