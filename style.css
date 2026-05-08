@@ -554,6 +554,52 @@ main.is-out, footer.is-out {
   display: block;
   object-fit: cover;
 }
+.system-media img,
+.zoomable { cursor: zoom-in; transition: transform 0.2s ease, border-color 0.2s ease; }
+.system-media img:hover,
+.zoomable:hover { border-color: var(--accent); }
+
+.lightbox {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.92);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+  cursor: zoom-out;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.18s ease;
+}
+.lightbox.open { opacity: 1; pointer-events: auto; }
+.lightbox img {
+  max-width: 92vw;
+  max-height: 92vh;
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.6);
+  object-fit: contain;
+  background: #000;
+}
+.lightbox-close {
+  position: absolute;
+  top: 20px;
+  right: 24px;
+  background: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: #fff;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 11px;
+  letter-spacing: 1.5px;
+  padding: 6px 12px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+.lightbox-close:hover {
+  border-color: var(--accent);
+  color: var(--accent);
+}
 .system-media iframe {
   width: 100%;
   border-radius: 14px;
