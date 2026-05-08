@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Rithwik — Contact</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet"/>
+<link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+
+<canvas id="stars"></canvas>
+<div class="vignette"></div>
+
+<header class="topnav">
+  <a class="brand" href="index.html">rithwik</a>
+  <nav class="nav-tabs">
+    <a class="nav-tab" href="roblox.html">Roblox</a>
+    <a class="nav-tab" href="projects.html">Projects</a>
+    <a class="nav-tab" href="other.html">Other</a>
+    <a class="nav-tab on" href="contact.html">Contact</a>
+  </nav>
+  <a class="resume-btn" href="Rithwik_Mohanty_Resume.pdf" download>
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+    Resume
+  </a>
+</header>
+
+<main class="page">
+  <div class="container">
+    <div class="sec-tag">// 03 · Contact</div>
+    <h1 class="sec-title">Get in <em>touch.</em></h1>
+    <p class="sec-blurb">Open to collabs, freelance Roblox/Luau gigs, and just trading notes.</p>
+    <div class="contact-card">
+      <h2>Have a project, a question, or a <em>weird idea?</em></h2>
+      <p>Email is the fastest line. I read everything.</p>
+      <a class="mail-btn" href="mailto:rithmohanty07@gmail.com" data-open-email>Send a message →</a>
+      <div class="contact-list">
+        <a href="https://github.com/rmohanty521" target="_blank" rel="noopener noreferrer"><div><span class="lab">GITHUB</span>github.com/rmohanty521</div><span>↗</span></a>
+        <a href="#" id="discord-copy" data-handle="madefortriceratops"><div><span class="lab">DISCORD</span><span id="discord-text">@madefortriceratops</span></div><span id="discord-icon">⧉</span></a>
+        <a href="https://www.roblox.com/users/profile?username=pokeboy2007" target="_blank" rel="noopener noreferrer"><div><span class="lab">ROBLOX</span>@pokeboy2007</div><span>↗</span></a>
+      </div>
+    </div>
+
+    <div id="email-modal" class="modal" hidden>
+      <div class="modal-backdrop" data-modal-close></div>
+      <div class="modal-card" role="dialog" aria-modal="true" aria-labelledby="email-modal-title">
+        <button type="button" class="modal-close" data-modal-close aria-label="Close">×</button>
+        <h2 id="email-modal-title">Send a <em>message</em></h2>
+        <p class="modal-sub">Lands in my inbox. I read everything.</p>
+        <form id="email-form" class="email-form" novalidate>
+          <label class="field"><span>Your name</span><input type="text" name="name" required autocomplete="name"></label>
+          <label class="field"><span>Your email</span><input type="email" name="email" required autocomplete="email"></label>
+          <label class="field"><span>Subject</span><input type="text" name="subject" required></label>
+          <label class="field"><span>Message</span><textarea name="message" rows="5" required></textarea></label>
+          <button type="submit" class="mail-btn">Send →</button>
+          <p class="form-status" id="form-status"></p>
+        </form>
+      </div>
+    </div>
+  </div>
+</main>
+
+<footer>© 2026 / RITHWIK · &lt;Dev/&gt;</footer>
+<script src="stars.js"></script>
+<script src="transitions.js"></script>
+<script src="email-form.js"></script>
+</body>
+</html>

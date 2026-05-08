@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Rithwik — Smaller Systems</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet"/>
+<link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+
+<canvas id="stars"></canvas>
+<div class="vignette"></div>
+
+<header class="topnav">
+  <a class="brand" href="index.html">rithwik</a>
+  <nav class="nav-tabs">
+    <a class="nav-tab on" href="roblox.html">Roblox</a>
+    <a class="nav-tab" href="projects.html">Projects</a>
+    <a class="nav-tab" href="other.html">Other</a>
+    <a class="nav-tab" href="contact.html">Contact</a>
+  </nav>
+  <a class="resume-btn" href="Rithwik_Mohanty_Resume.pdf" download>
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+    Resume
+  </a>
+</header>
+
+<main class="page">
+  <div class="container">
+    <a class="detail-back" href="roblox.html">← Roblox</a>
+    <div class="sec-tag">// Systems · Luau</div>
+    <h1 class="sec-title">Smaller <em>systems.</em></h1>
+    <p class="sec-blurb">Mini-systems and prototypes I've built — pieces of larger games or standalone experiments.</p>
+
+    <div class="systems">
+      <section class="system">
+        <div class="system-text">
+          <div class="sys-tag">// SYSTEM 01</div>
+          <h2>Custom <em>movement</em></h2>
+          <p>Server-authoritative movement controller with client prediction — handles dashes, wall slides, and frame-perfect inputs without rubber-banding.</p>
+          <div class="tags"><span class="pill">LUAU</span><span class="pill">NETCODE</span></div>
+        </div>
+        <div class="system-media">
+          <!-- swap with: <video controls muted loop src="media/sys-movement.mp4"></video> -->
+          <div class="video-placeholder">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+            <span>video soon</span>
+          </div>
+        </div>
+      </section>
+
+      <section class="system">
+        <div class="system-text">
+          <div class="sys-tag">// SYSTEM 02</div>
+          <h2>UI <em>kit</em></h2>
+          <p>Themed component library — buttons, modals, tween presets, toast notifications. Drop-in for every new game so I'm not rebuilding the same UI from scratch.</p>
+          <div class="tags"><span class="pill">LUAU</span><span class="pill">UI</span></div>
+        </div>
+        <div class="system-media">
+          <!-- swap with: <video controls muted loop src="media/sys-ui.mp4"></video> -->
+          <div class="video-placeholder">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+            <span>video soon</span>
+          </div>
+        </div>
+      </section>
+
+      <section class="system">
+        <div class="system-text">
+          <div class="sys-tag">// SYSTEM 03</div>
+          <h2>Procedural <em>spawner</em></h2>
+          <p>Weighted spawn tables with cooldowns and zone gating. Used for loot, NPC waves, and resource drops — config-driven so designers (me) can rebalance fast.</p>
+          <div class="tags"><span class="pill">LUAU</span><span class="pill">PROCGEN</span></div>
+        </div>
+        <div class="system-media">
+          <!-- swap with: <video controls muted loop src="media/sys-spawner.mp4"></video> -->
+          <div class="video-placeholder">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+            <span>video soon</span>
+          </div>
+        </div>
+      </section>
+
+      <section class="system">
+        <div class="system-text">
+          <div class="sys-tag">// SYSTEM 04</div>
+          <h2>Damage &amp; <em>hitboxes</em></h2>
+          <p>Hitbox module supporting raycasts, swept volumes, and overlap checks. Server-validated so client claims don't dictate damage.</p>
+          <div class="tags"><span class="pill">LUAU</span><span class="pill">COMBAT</span></div>
+        </div>
+        <div class="system-media">
+          <!-- swap with: <video controls muted loop src="media/sys-hitbox.mp4"></video> -->
+          <div class="video-placeholder">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+            <span>video soon</span>
+          </div>
+        </div>
+      </section>
+    </div>
+  </div>
+</main>
+
+<footer>© 2026 / RITHWIK · &lt;Dev/&gt;</footer>
+<script src="stars.js"></script>
+<script src="transitions.js"></script>
+<script src="email-form.js"></script>
+</body>
+</html>
