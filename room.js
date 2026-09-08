@@ -3,7 +3,7 @@
 // objects are pixel-grid sprites; a future Claude generator just has to output the same
 // { pal: {char: "#hex"}, px: ["row strings"] } shape to become placeable.
 
-const PASS_HASH = "a06b51749e8f09be02d4846e183ba9e62545e50a98cbac8f3fe07a419bbb49a5";
+const PASS_HASH = "ec869e7149cc196935a397270c59e07ff86ca01dd8337bf4b5573290e4ee3e95";
 const EMAIL_HASHES = [
   "09adbee9f07490754124a595c334eb2f3e5cdf8ca20208ea87a4547ac5ef581e",
   "d9d00b8dab6c06afa52d2b816464b7795d7be60a2d118a64d3348152c7815992",
