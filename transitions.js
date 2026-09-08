@@ -19,6 +19,8 @@
     try {
       const url = new URL(href, location.href);
       if (url.origin !== location.origin) return false;
+      // room.html is a standalone page (own scripts/canvas) — needs a full load
+      if (url.pathname.endsWith('/room.html')) return false;
     } catch (_) { return false; }
     return true;
   }
