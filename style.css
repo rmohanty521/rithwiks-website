@@ -536,6 +536,17 @@ main.is-out, footer.is-out {
 }
 .detail-back:hover { color: var(--accent); }
 
+.design-notes {
+  margin-top: 40px;
+  padding: 24px 28px;
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  max-width: 820px;
+}
+.design-notes ul { list-style: none; display: flex; flex-direction: column; gap: 12px; }
+.design-notes li { color: var(--ink-soft); font-size: 14px; line-height: 1.6; }
+.design-notes b { color: var(--ink); }
+
 .systems { display: flex; flex-direction: column; }
 .system {
   display: grid;

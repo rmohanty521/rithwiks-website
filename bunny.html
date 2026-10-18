@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Rithwik — Bunny Merge Battles</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet"/>
+<link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+
+<canvas id="stars"></canvas>
+<div class="vignette"></div>
+
+<header class="topnav">
+  <a class="brand" href="index.html">rithwik</a>
+  <nav class="nav-tabs">
+    <a class="nav-tab on" href="roblox.html">Roblox</a>
+    <a class="nav-tab" href="projects.html">Projects</a>
+    <a class="nav-tab" href="other.html">Other</a>
+    <a class="nav-tab" href="contact.html">Contact</a>
+  </nav>
+  <a class="resume-btn" href="Rithwik_Mohanty_Resume.pdf" download>
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+    Resume
+  </a>
+</header>
+
+<main class="page">
+  <div class="container">
+    <a class="detail-back" href="roblox.html">← Roblox</a>
+    <div class="sec-tag">// Featured · Luau</div>
+    <h1 class="sec-title">Bunny Merge <em>Battles</em></h1>
+    <p class="sec-blurb">An idle merge game: raise a swarm of bunnies, merge them into bigger ones, and send them after apples, bosses and new worlds. All clips are real gameplay with the live game UI.</p>
+    <a class="mail-btn" href="https://www.roblox.com/games/92584128351719/Bunny-Merge-Battles" target="_blank" rel="noopener">Play on Roblox ↗</a>
+
+    <div class="design-notes">
+      <div class="sys-tag">// Under the hood</div>
+      <ul>
+        <li><b>Size-aware swarm layout.</b> No fixed rings: a greedy packer walks outward ring by ring and gives each bunny the first spot that clears everyone already placed, so the formation grows with the count. Small bunnies lead, big ones fill the back, and the arc fans 160° behind you while walking, then closes into a full ring when you stop.</li>
+        <li><b>Surrounding enemies.</b> On attack the biggest bunnies claim spots first, each spaced by the enemy's radius plus its own, filling the near side first. Returning bunnies keep their old slot, so a new arrival only shifts who it has to, and overlaps push apart by mass so small bunnies step aside.</li>
+        <li><b>Client-simulated swarms.</b> The server only owns the roster (one encoded attribute). Every client simulates all swarms locally and turns toward a clicked enemy instantly, rolling back if the server says no.</li>
+        <li><b>Hits synced to animation.</b> The server announces each swing 0.26s before damage, and clients start the headbutt clip early so its hit frame lands exactly on the damage, with slight random offsets so the swarm doesn't move in lockstep.</li>
+        <li><b>Merge choreography.</b> All merges run off one shared render loop. Heavy merge storms degrade to a quick pop, and the first merge gets a 1.6× slow-mo scripted camera.</li>
+      </ul>
+    </div>
+
+    <div class="systems">
+      <section class="system">
+        <div class="system-text">
+          <div class="sys-tag">// CLIP 01</div>
+          <h2>Magic <em>hat</em></h2>
+          <p>Tap the big red button and bunnies meteor down around you, stacking toward the next merge.</p>
+          <div class="tags"><span class="pill">LUAU</span><span class="pill">GAMEPLAY</span></div>
+        </div>
+        <div class="system-media"><video controls muted loop playsinline preload="metadata" src="media/bunny/01_tap_magic_hat.mp4"></video></div>
+      </section>
+
+      <section class="system">
+        <div class="system-text">
+          <div class="sys-tag">// CLIP 02</div>
+          <h2>Merging</h2>
+          <p>Ten of a kind merge into one bigger bunny, with a slow-motion cinematic camera on the first merge.</p>
+          <div class="tags"><span class="pill">LUAU</span><span class="pill">CAMERA</span></div>
+        </div>
+        <div class="system-media"><video controls muted loop playsinline preload="metadata" src="media/bunny/02_merge_slowmo.mp4"></video></div>
+      </section>
+
+      <section class="system">
+        <div class="system-text">
+          <div class="sys-tag">// CLIP 03</div>
+          <h2>Swarm <em>combat</em></h2>
+          <p>Click an enemy and your swarm rings it, headbutting in sync with the animation until it pops into coins.</p>
+          <div class="tags"><span class="pill">LUAU</span><span class="pill">AI</span></div>
+        </div>
+        <div class="system-media"><video controls muted loop playsinline preload="metadata" src="media/bunny/03_swarm_apple_bonk.mp4"></video></div>
+      </section>
+
+      <section class="system">
+        <div class="system-text">
+          <div class="sys-tag">// CLIP 04</div>
+          <h2>Boss: <em>King Apple</em></h2>
+          <p>King Apple's slam and spin specials against a 20-bunny swarm, ending in BOSS BEATEN.</p>
+          <div class="tags"><span class="pill">LUAU</span><span class="pill">COMBAT</span></div>
+        </div>
+        <div class="system-media"><video controls muted loop playsinline preload="metadata" src="media/bunny/04_boss_king_apple.mp4"></video></div>
+      </section>
+
+      <section class="system">
+        <div class="system-text">
+          <div class="sys-tag">// CLIP 05</div>
+          <h2>Hatter <em>frenzy</em></h2>
+          <p>A live admin event: the hat frenzy pours bunnies out, triggering x11 merge chains and new-bunny reveals.</p>
+          <div class="tags"><span class="pill">LUAU</span><span class="pill">LIVE EVENTS</span></div>
+        </div>
+        <div class="system-media"><video controls muted loop playsinline preload="metadata" src="media/bunny/05_hatter_frenzy.mp4"></video></div>
+      </section>
+
+      <section class="system">
+        <div class="system-text">
+          <div class="sys-tag">// CLIP 06</div>
+          <h2>Breeding <em>hutch</em></h2>
+          <p>Tap a recipe, breed two parents on a timer, collect the baby (timer fast-forwarded).</p>
+          <div class="tags"><span class="pill">LUAU</span><span class="pill">DATASTORE</span></div>
+        </div>
+        <div class="system-media"><video controls muted loop playsinline preload="metadata" src="media/bunny/06_breeding_hutch.mp4"></video></div>
+      </section>
+
+      <section class="system">
+        <div class="system-text">
+          <div class="sys-tag">// CLIP 07</div>
+          <h2>Underground <em>farm</em></h2>
+          <p>Walk over ripe crops to harvest, and assigned farm-hand bunnies auto-harvest the rest.</p>
+          <div class="tags"><span class="pill">LUAU</span><span class="pill">GAMEPLAY</span></div>
+        </div>
+        <div class="system-media"><video controls muted loop playsinline preload="metadata" src="media/bunny/07_farm_harvest.mp4"></video></div>
+      </section>
+
+      <section class="system">
+        <div class="system-text">
+          <div class="sys-tag">// CLIP 08</div>
+          <h2>World <em>travel</em></h2>
+          <p>Travel menu with warp transitions from Wonderland Meadow to Card Kingdom to Jabberwock Peaks.</p>
+          <div class="tags"><span class="pill">LUAU</span><span class="pill">WORLDS</span></div>
+        </div>
+        <div class="system-media"><video controls muted loop playsinline preload="metadata" src="media/bunny/08_world_travel.mp4"></video></div>
+      </section>
+
+      <section class="system">
+        <div class="system-text">
+          <div class="sys-tag">// CLIP 09</div>
+          <h2>Inventory &amp; <em>upgrades</em></h2>
+          <p>Inventory with live 3D bunny previews and stats, then buying upgrades in the Magic Shop.</p>
+          <div class="tags"><span class="pill">LUAU</span><span class="pill">UI</span></div>
+        </div>
+        <div class="system-media"><video controls muted loop playsinline preload="metadata" src="media/bunny/09_ui_inventory_upgrades.mp4"></video></div>
+      </section>
+    </div>
+  </div>
+</main>
+
+<footer>© 2026 / RITHWIK · &lt;Dev/&gt;</footer>
+<script src="stars.js"></script>
+<script src="transitions.js"></script>
+<script src="email-form.js"></script>
+<script src="lightbox.js"></script>
+</body>
+</html>
